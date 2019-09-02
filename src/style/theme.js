@@ -59,7 +59,7 @@ const theme = {
     background: () => theme.colors.primary
   },
   primarynav: {
-    color: () => theme.colors.light
+    color: () => "#fff"
   },
   containers: {}
 };

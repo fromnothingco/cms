@@ -6,7 +6,7 @@ const Table = styled.table`
   background: #fff;
   border-radius: 5px;
   border-collapse: collapse;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
   th,
   td {
     padding: 0.5rem 1rem;

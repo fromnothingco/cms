@@ -16,11 +16,11 @@ const MobileControl = styled.span`
 
 const DeskTopNav = styled.nav`
   a {
-    font-size: 1.2rem;
+    font-weight: bold;
     color: ${props => darken(0.1, props.theme.primarynav.color())};
     text-decoration: none;
     &:hover {
-      color: #f1f1f1;
+      color: ${props => darken(0.1, props.theme.primarynav.color())};
       background: ${props => darken(0.1, props.theme.mast.background())};
     }
   }

@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
 
   @media(max-width: 500px){
     .content {
-      padding-top:120px;
+      padding-top:80px;
       width: 100%;
       margin:0;
     }

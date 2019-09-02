@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 const Header = styled.header`
   display: flex;
+  align-items: center;
+  margin-bottom: 36px;
   h1,
   h2,
   h3,
