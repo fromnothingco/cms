@@ -30,8 +30,9 @@ const Mast = styled.section`
       }
       a {
         display:block;
+        font-size:1rem;
         text-transform: capitalize;
-        padding: 0.3rem 0.5rem;
+        padding: 0.7rem 1rem;
       }
       @media(max-width:500px){
         height: auto;
