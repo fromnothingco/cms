@@ -56,7 +56,10 @@ const theme = {
     }
   },
   mast: {
-    background: () => darken(0.02, theme.colors.light)
+    background: () => theme.colors.primary
+  },
+  primarynav: {
+    color: () => theme.colors.light
   },
   containers: {}
 };

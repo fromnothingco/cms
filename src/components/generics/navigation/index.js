@@ -1,19 +1,39 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
-
+import { darken } from "polished";
 const MobileControl = styled.span`
   font-size: 1.5rem;
+  display: none;
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 500px) {
+    display: block;
+  }
+`;
+
+const DeskTopNav = styled.nav`
+  a {
+    font-size: 1.2rem;
+    color: ${props => darken(0.1, props.theme.primarynav.color())};
+    text-decoration: none;
+    &:hover {
+      color: #f1f1f1;
+      background: ${props => darken(0.1, props.theme.mast.background())};
+    }
+  }
+  @media (max-width: 500px) {
+    display: none;
   }
 `;
 
 const Container = styled(motion.div)`
   position: fixed;
   height: 100%;
-  width: 100%;
-  background: #fff;
+  width: 90%;
+  background: ${props => props.theme.mast.background()};
   top: 0;
   right: 0;
   display: flex;
@@ -31,6 +51,14 @@ const Container = styled(motion.div)`
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  a {
+    color: ${props => darken(0.1, props.theme.primarynav.color())};
+    text-decoration: none;
+    &:hover {
+      color: #f1f1f1;
+      background: ${props => darken(0.1, props.theme.mast.background())};
+    }
   }
 `;
 
@@ -58,7 +86,20 @@ const PrimaryNavigation = ({
   }
   return (
     <>
-      <MobileControl className={className} onClick={toggleNav}>
+      <DeskTopNav>
+        {React.Children.map(children, (child, i) => {
+          return React.cloneElement(
+            child,
+            { closeMenu: setNavState },
+            children
+          );
+        })}
+      </DeskTopNav>
+
+      <MobileControl
+        className={`${className} mobile-control`}
+        onClick={toggleNav}
+      >
         {!closeLabel ? <i className="fa fa-bars" /> : menuLabel}
       </MobileControl>
       <AnimatePresence>

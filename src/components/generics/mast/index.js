@@ -7,36 +7,36 @@ const Mast = styled.section`
   justify-content: center;
   align-items: center;
   z-index: 1;
+  .branding {
+    padding: 1rem;
+  }
   nav ul {
     list-style: none;
     padding: 0;
     marign: 0;
     display: flex;
-
-    li {
-      margin: 0 0.5rem;
-    }
   }
   ${props => {
     console.log(props);
     return props.sidebar
       ? `
       height: 100%;
+      width:100%;
+      max-width: 200px;
       nav {
-        padding: 2rem;
         ul {
           flex-direction: column;
         }
       }
+      a {
+        display:block;
+        text-transform: capitalize;
+        padding: 0.3rem 0.5rem;
+      }
       @media(max-width:500px){
         height: auto;
         width: 100%;
-        nav {
-          padding: 0;
-          ul {
-            flex-direction: row;
-          }
-        }
+        max-width: 100%;
       }
    `
       : null;

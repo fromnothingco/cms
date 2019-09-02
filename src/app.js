@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     height:100%;
   }
   body {
-    background: #fff;
+    background: ${props => props.theme.colors.light};
     font-family: ${props => props.theme.main.font || "sans-serif"};
     color: ${props => props.theme.main.color || "#333"};
     padding:0;
@@ -37,23 +37,17 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .content {
-    padding: 2rem;
-    width:80%;
-    margin: 0 auto;
-    overflow-x: auto;
+    margin-left: 200px;
+    padding:2rem;
   }
 
-  .sidebar {
-    padding: 2rem;
-    background: #000;
-  }
-
-  .main {
-    height:100%;
+  @media(max-width: 500px){
     .content {
-      flex:5;
+      padding-top:120px;
+      width: 100%;
+      margin: 0;
     }
-  }
+  } 
 `;
 
 const App = () => {
