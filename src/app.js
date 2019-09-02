@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import CreateEdit from "./pages/editCreate";
 import List from "./pages/list";
 import Home from "./pages/home";
@@ -56,11 +56,13 @@ const App = () => {
     <>
       <GlobalStyle />
       <Router>
-        <Route path="/" exact component={Login} />
-        <Route path="/list/:type" component={List} />
-        <Route path="/home" component={Home} />
-        <Route path="/:type/new" exact component={CreateEdit} />
-        <Route path="/:type/edit/:id" exact component={CreateEdit} />
+        <Switch>
+          <Route path="/:type/:action" exact component={CreateEdit} />
+          <Route path="/:type/:action/:id" exact component={CreateEdit} />
+          <Route path="/" exact component={Login} />
+          <Route path="/home" component={Home} />
+          <Route path="/:type" component={List} />
+        </Switch>
       </Router>
     </>
   );

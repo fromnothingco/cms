@@ -1,5 +1,5 @@
 const config = {
-  baseurl: "",
+  baseurl: "https://api.test.com",
   endpoints: {
     posts: {
       endpoint: "/posts",
