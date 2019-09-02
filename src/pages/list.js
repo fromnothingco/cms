@@ -5,16 +5,19 @@ import Button from "../components/generics/button";
 import Layout from "../layout";
 import Table from "../components/generics/table";
 import config from "../../api.config";
+import Header from "../components/headings";
 
-const EditCreate = ({ match }) => {
+const List = ({ match }) => {
   const { params } = match;
   const { data } = config.endpoints[params.type];
   return (
     <Layout>
-      <H1>{params.type}</H1>
-      <Button type="link" href={`/${params.type.toString()}/new`}>
-        New {params.type.toString()}
-      </Button>
+      <Header>
+        <H1>{params.type}</H1>
+        <Button type="link" href={`/${params.type.toString()}/new`}>
+          New {params.type.toString()}
+        </Button>
+      </Header>
       <Table>
         <thead>
           <tr>
@@ -47,4 +50,4 @@ const EditCreate = ({ match }) => {
   );
 };
 
-export default EditCreate;
+export default List;

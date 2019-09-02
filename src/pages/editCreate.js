@@ -4,15 +4,17 @@ import Layout from "../layout";
 import config from "../../api.config";
 import Form from "../components/generics/form";
 import * as Fields from "../components/generics/inputs";
-
+import Header from "../components/headings";
 const EditCreate = ({ match }) => {
   const { params } = match;
   const { data } = config.endpoints[params.type];
   return (
     <Layout>
-      <H1>
-        {params.action} {params.type}
-      </H1>
+      <Header>
+        <H1>
+          {params.action} {params.type}
+        </H1>
+      </Header>
       <Form onSubmit={data => console.log(data)}>
         {data.map(field => {
           const Component = Fields[field.component || "Input"];

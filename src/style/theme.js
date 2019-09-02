@@ -1,4 +1,4 @@
-import { darken } from "polished";
+import { darken, lighten } from "polished";
 
 const theme = {
   colors: {
@@ -55,7 +55,9 @@ const theme = {
       border: "1px solid #fff"
     }
   },
-  mast: {},
+  mast: {
+    background: () => darken(0.02, theme.colors.light)
+  },
   containers: {}
 };
 

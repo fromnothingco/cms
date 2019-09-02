@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
     background: #fff;
     font-family: ${props => props.theme.main.font || "sans-serif"};
     color: ${props => props.theme.main.color || "#333"};
+    padding:0;
+    margin: 0;
     line-height: 160%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -56,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
 
 const App = () => {
   return (
-    <div>
+    <>
       <GlobalStyle />
       <Router>
         <Route path="/" exact component={Home} />
@@ -64,7 +66,7 @@ const App = () => {
         <Route path="/:type/new" exact component={CreateEdit} />
         <Route path="/:type/edit/:id" exact component={CreateEdit} />
       </Router>
-    </div>
+    </>
   );
 };
 
