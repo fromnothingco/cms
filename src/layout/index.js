@@ -20,7 +20,7 @@ const NavigationItems = props => {
       <ul>
         {nav.map(item => (
           <li>
-            <Link to={item} onClick={menuToggle}>
+            <Link to={"/list" + item} onClick={menuToggle}>
               {item.replace("/", "")}
             </Link>
           </li>

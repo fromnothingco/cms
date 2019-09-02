@@ -54,7 +54,7 @@ const buttonBase = css`
 const Container = styled.div`
   position: relative;
   display: inline-block;
-  margin: 10px;
+  margin-top: 10px;
   border-radius: ${props => props.theme.main.borderRadius || "5px"};
   .loader,
   .done {
