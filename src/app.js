@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CreateEdit from "./pages/editCreate";
 import List from "./pages/list";
+import Home from "./pages/home";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from "./style/theme";
 import { darken } from "polished";
@@ -58,7 +59,7 @@ const App = () => {
     <div>
       <GlobalStyle />
       <Router>
-        <Route path="/" exact component={CreateEdit} />
+        <Route path="/" exact component={Home} />
         <Route path="/:type" exact component={List} />
         <Route path="/:type/new" exact component={CreateEdit} />
         <Route path="/:type/edit/:id" exact component={CreateEdit} />
