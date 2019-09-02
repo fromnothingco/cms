@@ -15,7 +15,7 @@ const Table = styled.table`
   }
 
   tbody tr:hover {
-    background: ${props => lighten(0.3, props.theme.colors.primary)};
+    background: ${props => lighten(0.35, props.theme.colors.primary)};
     border-radius: 5px;
   }
 
