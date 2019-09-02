@@ -1,2 +1,5 @@
-# API Agnostic CMS
+# Styleguide
 
+## usage
+- npm install 
+- npm run dev 
