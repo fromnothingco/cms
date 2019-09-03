@@ -4,7 +4,7 @@ import { darken } from "polished";
 const SideBar = styled.section`
   height: 100%;
   width: 100%;
-  max-width: 200px;
+  max-width: 270px;
   position: fixed;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
   background: ${props => props.theme.sidebar.background() || "#fff"};
@@ -23,6 +23,12 @@ const SideBar = styled.section`
     &: hover {
       background: ${props => darken(0.04, props.theme.sidebar.background())};
       color: ${props => props.theme.sidebar.nav.color};
+    }
+    &.active {
+      background: ${props => darken(0.04, props.theme.sidebar.background())};
+      color: ${props => props.theme.sidebar.nav.color};
+      border-right: 3px solid
+        ${props => darken(0.3, props.theme.sidebar.background())};
     }
   }
   @media (max-width: 500px) {

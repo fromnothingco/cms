@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { darken } from "polished";
+import { lighten, darken } from "polished";
 const Mast = styled.section`
   position: fixed;
   width: 100%;
@@ -22,7 +22,24 @@ const Mast = styled.section`
     }
   }
   display: flex;
-  nav {
+  a {
+    display: block;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    margin: 4px;
+    text-decoration: none;
+    color: ${props => props.theme.mast.nav.color};
+    &: hover {
+      border-radius: 5px;
+      background: ${props => lighten(0.04, props.theme.mast.background())};
+      color: ${props => props.theme.mast.nav.color};
+    }
+    &.active {
+      border-radius: 5px;
+      background: ${props => lighten(0.04, props.theme.mast.background())};
+      color: ${props => props.theme.mast.nav.color};
+    }
   }
   .mobile-control {
     padding: 1rem;

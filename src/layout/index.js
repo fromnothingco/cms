@@ -1,6 +1,6 @@
 import React from "react";
 import config from "../../api.config";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Mast from "../components/generics/mast";
 import MobileMenu from "../components/generics/mobileNavigation";
 import Navigation from "../components/generics/navigation";
@@ -22,9 +22,9 @@ const NavigationItems = props => {
         <ul>
           {nav.map(item => (
             <li>
-              <Link to={item} onClick={menuToggle}>
+              <NavLink to={item} onClick={menuToggle}>
                 {item.replace("/", "")}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -41,6 +41,7 @@ const Layout = ({ children }) => {
         <MobileMenu>
           <NavigationItems />
         </MobileMenu>
+        <a href="#">Logout</a>
       </Mast>
       <SideBar>
         <div className="branding">StyleGuide</div>

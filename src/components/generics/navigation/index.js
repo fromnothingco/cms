@@ -5,7 +5,7 @@ import { darken } from "polished";
 const DeskTopNav = styled.nav`
   a {
     display: block;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 2.4rem;
     color: ${props => props.theme.primarynav.color()};
     text-decoration: none;
     text-transform: capitalize;

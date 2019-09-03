@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     
     padding:2rem;
     padding-top:80px; 
-    margin-left: 200px;
+    margin-left: 270px;
   }
 
   @media(max-width: 500px){
