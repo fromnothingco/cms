@@ -39,13 +39,14 @@ const GlobalStyle = createGlobalStyle`
 
   .content {
     
-    padding:2rem;
+    padding:4rem;
     padding-top:80px; 
     margin-left: 270px;
   }
 
   @media(max-width: 500px){
     .content {
+      padding:80px 2rem 2rem; 
       width: 100%;
       margin-left:0;
     }

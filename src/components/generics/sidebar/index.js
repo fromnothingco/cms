@@ -35,7 +35,7 @@ const SideBar = styled.section`
     display: none;
   }
 
-  z-index: 0;
+  z-index: 2;
   .branding {
     padding: 1rem;
     color: ${props => props.theme.colors.light};

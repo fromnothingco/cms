@@ -4,6 +4,7 @@ import { lighten, darken } from "polished";
 const Mast = styled.section`
   position: fixed;
   width: 100%;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
   background: ${props => props.theme.mast.background() || "#fff"};
   align-items: center;
   z-index: 1;
@@ -32,7 +33,7 @@ const Mast = styled.section`
     color: ${props => props.theme.mast.nav.color};
     &: hover {
       border-radius: 5px;
-      background: ${props => lighten(0.04, props.theme.mast.background())};
+      background: ${props => darken(0.04, props.theme.mast.background())};
       color: ${props => props.theme.mast.nav.color};
     }
     &.active {
