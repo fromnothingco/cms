@@ -38,15 +38,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .content {
-    margin-left: 200px;
+    
     padding:2rem;
+    padding-top:80px; 
+    margin-left: 200px;
   }
 
   @media(max-width: 500px){
     .content {
-      padding-top:80px;
       width: 100%;
-      margin:0;
+      margin-left:0;
     }
   } 
 `;

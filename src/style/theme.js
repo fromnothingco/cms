@@ -58,6 +58,12 @@ const theme = {
   mast: {
     background: () => theme.colors.primary
   },
+  sidebar: {
+    background: () => lighten(0.01, theme.colors.light),
+    nav: {
+      color: () => theme.colors.dark
+    }
+  },
   primarynav: {
     color: () => "#fff"
   },
