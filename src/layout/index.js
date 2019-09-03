@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
         <MobileMenu>
           <NavigationItems />
         </MobileMenu>
-        <a href="#">Logout</a>
+        <a href="/">Logout</a>
       </Mast>
       <SideBar>
         <div className="branding">StyleGuide</div>
